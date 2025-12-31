@@ -1,0 +1,2 @@
+- name: LÖVE Build
+  uses: nhartland/love-build@v1.0.1
