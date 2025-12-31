@@ -2,7 +2,7 @@ name: Build
 run-name: Building the game :D
 on: [push]
 jobs:
-  Build binaries:
+  Build-binaries:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
