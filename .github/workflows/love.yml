@@ -1,2 +1,12 @@
-- name: LÖVE Build
-  uses: nhartland/love-build@v1.0.1
+steps:
+- uses: actions/checkout@v4
+# Build the applications
+- uses: nhartland/love-build@v1
+  with:
+   app_name: 'undertale-for-love'
+   love_version: '11.5'
+# Upload the built applications
+- uses: actions/upload-artifact@v4
+  with:
+    name: built-applications
+    path: 'release'
