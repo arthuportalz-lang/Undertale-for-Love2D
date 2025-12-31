@@ -1,12 +1,18 @@
-steps:
-- uses: actions/checkout@v4
-# Build the applications
-- uses: nhartland/love-build@v1
-  with:
-   app_name: 'undertale-for-love'
-   love_version: '11.5'
-# Upload the built applications
-- uses: actions/upload-artifact@v4
-  with:
-    name: built-applications
-    path: 'release'
+name: Build
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    # Build the applications
+    - uses: nhartland/love-build@v1
+      with:
+       app_name: 'undertable-framework'
+       love_version: '11.5'
+    # Upload the built applications
+    - uses: actions/upload-artifact@v4
+      with:
+        name: built-applications
+        path: 'release'
